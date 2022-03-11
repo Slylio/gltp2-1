@@ -90,7 +90,7 @@ class TestGeneration {
           		"Conversion en chaine", "return \"\";"));
 		
 		// append
-		beh1.add(new Concrete(Keywords.FINAL+list,"append",pa,
+		beh1.add(new Concrete(Keywords.FINAL+root,"append",finalPa,
 				"concatenation", "return l;"));
 		
 		//reverse 

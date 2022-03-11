@@ -1,7 +1,7 @@
 package input;
 
 /**
- * Pr�sentation simplifiee d'un attribut.
+ * Présentation simplifiee d'un attribut.
  * Ils sont publiques, sans valeur initiales
  * 
  *
@@ -33,8 +33,9 @@ public class Attribute {
 	 * @return genere le code.
 	 */
 	public String generate() {
-		// TODO
-		return "//TODO Attribute.generate";
+		String res="//attribut"+Keywords.NEWLINE;
+		res+=Keywords.PUBLIC+getType()+" "+getName()+";";
+		return res;
 	}
 	
 	/**
@@ -42,8 +43,7 @@ public class Attribute {
 	 * @return genere un parametre correspondant.
 	 */
 	public String generateParameter() {
-		// TODO
-		return "TODO";
+		return getType()+" "+getName();
 	}
 	
 	/**
