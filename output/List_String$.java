@@ -32,12 +32,12 @@ public abstract class List_String$ extends String {
 
 
       // Insertion en tete de liste
-      public NotEmpty cons( String  e)  { 
+      public NotEmpty cons( String e)  { 
             return new NotEmpty(e, this);
       } 
 
       // Ajout en fin de liste
-      public abstract NotEmpty putlast( String  e) ; 
+      public abstract NotEmpty putlast( String e) ; 
 
 
       // Inversion d'une liste

@@ -21,11 +21,19 @@ class TestGeneration {
     	// Noms des classes du patron
     	String root = "List", base = "Empty", composite = "NotEmpty";
     	
+
+		//------------------------
+
+		String listOf="String";	//A MODIFIER POUR CHANGER LE TYPE DES ITEMS DE LA LISTE
+
+		//------------------------
+
+
     	//-------------- auxillaires pour parametres
     	Vector<Parameter> pa = new Vector<Parameter>();
       	pa.add(new Parameter(root, "l"));
      	Vector<Parameter> ps = new Vector<Parameter>();
-     	ps.add(new Parameter(Keywords.STRING, "e"));	//A MODIFIER POUR CHANGER LE TYPE DES ITEMS DE LA LISTE
+     	ps.add(new Parameter(listOf, "e"));	//A MODIFIER POUR CHANGER LE TYPE DES ITEMS DE LA LISTE
       	// ------------
         	
       	//============ root description (List)
@@ -62,7 +70,7 @@ class TestGeneration {
       		"Inversion d'une liste"));
  
        	// la classe
-		String listOf="String";	//A MODIFIER POUR CHANGER LE TYPE DES ITEMS DE LA LISTE
+		
      	Class list = new Class(root+Keywords.IN+listOf+Keywords.OUT, Class.NOATTRIBUTE, beh, false, listOf);	
       	
      	// ecriture du fichier
