@@ -72,9 +72,9 @@ class TestGeneration {
 
 		//-------------- auxillaires pour parametres
 		Vector<Parameter> finalPa = new Vector<Parameter>();
-      	pa.add(new Parameter(Keywords.FINAL+root, "l"));
+      	finalPa.add(new Parameter(Keywords.FINAL+root, "l"));
      	Vector<Parameter> finalPs = new Vector<Parameter>();
-     	ps.add(new Parameter(Keywords.FINAL+Keywords.INT, "e"));
+     	finalPs.add(new Parameter(Keywords.FINAL+Keywords.INT, "e"));
 		// ------------
      	//================ base description (Empty)
        	Vector<Method> beh1 = new Vector<Method>();

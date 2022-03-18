@@ -34,12 +34,12 @@ public class NotEmpty extends List {
       } 
 
       // concatenation purement fonctionnelle.
-      public final List append( )  { 
+      public final List append( final List l)  { 
             return tail.append(l).cons(head);
       } 
 
       // ajout a la fin.
-      public final NotEmpty putLast( )  { 
+      public final NotEmpty putLast( final int  e)  { 
             return tail.putlast(e).cons(head);
       } 
 

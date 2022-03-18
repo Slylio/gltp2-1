@@ -22,7 +22,7 @@ public class Concrete extends Method {
 	 * @param b corps
 	 */
 	public Concrete(final String tp, final String n, 
-			final Vector<Parameter> pars, final String com, final String b) {
+		final Vector<Parameter> pars, final String com, final String b) {
 		super(tp, n, pars, com);
 		this.body = b;
 		this.concrete = true;
@@ -36,14 +36,15 @@ public class Concrete extends Method {
 		// le commentaire
 		String towrite = Keywords.TAB + Keywords.COMMENT 
 				+ this.getComments() + Keywords.NEWLINE;
+		
 		// la declaration concrete
 		towrite += Keywords.TAB + Keywords.PUBLIC;
 		towrite += this.getType() + Keywords.BLANC + this.getName() + Keywords.PARIN;
-		//paramètres méthode concrete
+		
+		// les parametres
 		towrite += this.generateParameters();
-		System.out.println(this.generateParameters());
-		towrite +=	Keywords.PAROUT + Keywords.ACCIN + Keywords.NEWLINE;
-		towrite += Keywords.TAB+ Keywords.TAB;
+		towrite += Keywords.PAROUT + Keywords.ACCIN +Keywords.NEWLINE+Keywords.TAB+Keywords.TAB;
+
 	
 		// le body
 		towrite+= getBody()+Keywords.NEWLINE;	

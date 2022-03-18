@@ -31,7 +31,7 @@ public class Empty extends List {
       } 
 
       // concatenation
-      public final List append( )  { 
+      public final List append( final List l)  { 
             return l;
       } 
 
@@ -41,7 +41,7 @@ public class Empty extends List {
       } 
 
       // ajout a la fin
-      public final NotEmpty putLast( )  { 
+      public final NotEmpty putLast( final int  e)  { 
             return new NotEmpty(e,this);
       } 
 } 

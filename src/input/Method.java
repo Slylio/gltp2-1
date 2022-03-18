@@ -66,13 +66,16 @@ public class Method {
 	 * @return une chaine
 	 */
 	public String generate() {
+		
 		// le commentaire
 		String towrite = Keywords.TAB + Keywords.COMMENT 
-				+ this.getComments() + Keywords.NEWLINE;
+		+ this.getComments() + Keywords.NEWLINE;	
+
 		// la declaration abstraite
 		towrite += Keywords.TAB + Keywords.PUBLIC;
 		towrite += Keywords.ABSTRACT;
 		towrite += this.getType() + Keywords.BLANC + this.getName() + Keywords.PARIN;
+
 		// les parametres
 		towrite += this.generateParameters();
 		towrite += Keywords.PAROUT + Keywords.SEMICOLON  + Keywords.NEWLINE;
