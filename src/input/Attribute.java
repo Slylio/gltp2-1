@@ -3,8 +3,6 @@ package input;
 /**
  * Présentation simplifiee d'un attribut.
  * Ils sont publiques, sans valeur initiales
- * 
- *
  */
 public class Attribute {
 	
@@ -33,9 +31,10 @@ public class Attribute {
 	 * @return genere le code.
 	 */
 	public String generate() {
-		String res="//attribut"+Keywords.NEWLINE;
-		res+=Keywords.PUBLIC+getType()+" "+getName()+";";
-		return res;
+		String towrite="	//attribut "+getName()+Keywords.NEWLINE;
+		towrite+=Keywords.TAB+generateParameter();
+		towrite+=Keywords.NEWLINE+Keywords.NEWLINE;
+		return towrite;
 	}
 	
 	/**
@@ -43,7 +42,7 @@ public class Attribute {
 	 * @return genere un parametre correspondant.
 	 */
 	public String generateParameter() {
-		return getType()+" "+getName();
+		return this.getType()+" "+this.getName()+";";
 	}
 	
 	/**

@@ -38,6 +38,9 @@ public class Keywords {
 	public static final String IN = "_";
 	/** constante string. */
 	public static final String OUT = "$";
+	/** constante string. */
+	public static final String EQUALS = " = ";
+
 	
 	/** constante string. */
 	public static final String ABSTRACT = "abstract ";

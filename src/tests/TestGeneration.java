@@ -119,11 +119,11 @@ class TestGeneration {
        	Vector<Method> beh2 = new Vector<Method>();
        	
 		// isEmpty 
-       	beh2.add(new Concrete(Keywords.FINAL+Keywords.BOOLEAN, "isEmpty", Method.NOPARAMETER, 
+       	beh2.add(new Concrete(Keywords.FINAL+Keywords.BOOLEAN,"isEmpty", Method.NOPARAMETER, 
        			"teste si empty ou pas", "return false;"));
 
        	// length
-       	beh2.add(new Concrete(Keywords.FINAL+Keywords.INT, "length", Method.NOPARAMETER, 
+       	beh2.add(new Concrete(Keywords.FINAL+Keywords.INT,"length", Method.NOPARAMETER, 
     			"Calcule la longueur de la liste", "return 1 + tail.length();"));
 		
 		//append
@@ -131,16 +131,16 @@ class TestGeneration {
 				"concatenation purement fonctionnelle.", "return tail.append(l).cons(head);"));
        	
 		//putLast
-		beh2.add(new Concrete(Keywords.FINAL+composite, "putLast", finalPs, 
-				"ajout a la fin.","return tail.putlast(e).cons(head)"));
+		beh2.add(new Concrete(Keywords.FINAL+composite,"putLast", finalPs, 
+				"ajout a la fin.","return tail.putlast(e).cons(head);"));
 		
 		//reverse
-		beh2.add(new Concrete(Keywords.FINAL+root, "reverse", Method.NOPARAMETER, 
-				"inversion purement fonctionenelle.","return tail.reverse().putLast(head)"));
+		beh2.add(new Concrete(Keywords.FINAL+root,"reverse", Method.NOPARAMETER, 
+				"inversion purement fonctionenelle.","return tail.reverse().putLast(head);"));
 		
 		//toString
-		beh2.add(new Concrete(Keywords.FINAL+Keywords.STRING, "toString", Method.NOPARAMETER, 
-				"redefinition.","return head+\" \"+ tail.toString()"));
+		beh2.add(new Concrete(Keywords.FINAL+Keywords.STRING,"toString", Method.NOPARAMETER, 
+				"redefinition.","return head+\" \"+ tail.toString();"));
 		
 		// la classe
      	Class notempty = new Class(composite, att, beh2, true, root);

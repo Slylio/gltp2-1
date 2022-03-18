@@ -82,6 +82,10 @@ public class Class {
 		for(Attribute at : this.getStructure()) {
 			result += at.generate();
 		}
+		
+		//génération constructeur
+		result+=generateConstructor();
+		
 		// les methodes
 		for(Method met : this.getBehaviour()) {
 			result += Keywords.NEWLINE + Keywords.NEWLINE;
@@ -96,9 +100,22 @@ public class Class {
 	 * @return Genere le code d'un constructeur complet.
 	 */
 	public String generateConstructor() {
-		// TODO
 		String towrite = Keywords.TAB + Keywords.COMMENT 
-						+ "TODO Le constucteur complet." + Keywords.NEWLINE;
+		+ "Le constucteur complet." + Keywords.NEWLINE
+		+ Keywords.TAB+Keywords.PUBLIC+getName()+Keywords.PARIN;
+		int count=0;
+		for (Attribute a : getStructure()){
+			count+=1;
+			towrite+=a.getType()+" "+a.getName();
+			if (count<getStructure().size()){
+				towrite+=", ";
+			}
+		}
+		towrite+=Keywords.PAROUT+Keywords.ACCIN+Keywords.NEWLINE;
+		for (Attribute a : getStructure()){
+			towrite+=Keywords.TAB+Keywords.TAB+"this."+a.getName()+Keywords.EQUALS+a.getName()+Keywords.SEMICOLON+Keywords.NEWLINE;
+		}
+		towrite+=Keywords.NEWLINE;
 		return towrite + Keywords.TAB + Keywords.ACCOUT + Keywords.NEWLINE;
 	}
 	

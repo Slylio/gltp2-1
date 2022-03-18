@@ -85,8 +85,16 @@ public class Method {
 	 * @return une liste de parametre
 	 */
 	public String generateParameters() {
-		// TODO
-		String towrite = "//TODO";
+		String towrite="";
+		int count=0;
+		for (Parameter p : getParameters()){
+			count+=1;
+			towrite+=p.generate();
+			if (count<arity()){
+				towrite+=", ";
+			}
+			
+		}
 		return towrite;
 	}
 	

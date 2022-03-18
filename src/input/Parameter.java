@@ -30,8 +30,9 @@ public class Parameter {
 	 * @return le code genere.
 	 */
 	public String generate() {
-		// TODO
-		return "//TODO\n";
+		String toWrite="";
+		toWrite+=this.getType()+" "+getVariable();
+		return toWrite;
 	}
 	
 	/**

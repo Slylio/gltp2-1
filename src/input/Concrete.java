@@ -39,9 +39,17 @@ public class Concrete extends Method {
 		// la declaration concrete
 		towrite += Keywords.TAB + Keywords.PUBLIC;
 		towrite += this.getType() + Keywords.BLANC + this.getName() + Keywords.PARIN;
+		//paramètres méthode concrete
+		towrite += this.generateParameters();
+		System.out.println(this.generateParameters());
 		towrite +=	Keywords.PAROUT + Keywords.ACCIN + Keywords.NEWLINE;
+		towrite += Keywords.TAB+ Keywords.TAB;
+	
+		// le body
+		towrite+= getBody()+Keywords.NEWLINE;	
 		towrite += Keywords.TAB + Keywords.ACCOUT;
 		return towrite;
+
 		
 	}
 
