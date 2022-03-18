@@ -25,7 +25,7 @@ class TestGeneration {
     	Vector<Parameter> pa = new Vector<Parameter>();
       	pa.add(new Parameter(root, "l"));
      	Vector<Parameter> ps = new Vector<Parameter>();
-     	ps.add(new Parameter(Keywords.INT, "e"));
+     	ps.add(new Parameter(Keywords.STRING, "e"));	//A MODIFIER POUR CHANGER LE TYPE DES ITEMS DE LA LISTE
       	// ------------
         	
       	//============ root description (List)
@@ -62,7 +62,8 @@ class TestGeneration {
       		"Inversion d'une liste"));
  
        	// la classe
-     	Class list = new Class(root, Class.NOATTRIBUTE, beh, false, "Object");
+		String listOf="String";	//A MODIFIER POUR CHANGER LE TYPE DES ITEMS DE LA LISTE
+     	Class list = new Class(root+Keywords.IN+listOf+Keywords.OUT, Class.NOATTRIBUTE, beh, false, listOf);	
       	
      	// ecriture du fichier
      	Write g = new Write(dir, list);
@@ -74,7 +75,7 @@ class TestGeneration {
 		Vector<Parameter> finalPa = new Vector<Parameter>();
       	finalPa.add(new Parameter(Keywords.FINAL+root, "l"));
      	Vector<Parameter> finalPs = new Vector<Parameter>();
-     	finalPs.add(new Parameter(Keywords.FINAL+Keywords.INT, "e"));
+     	finalPs.add(new Parameter(Keywords.FINAL+Keywords.STRING, "e"));
 		// ------------
      	//================ base description (Empty)
        	Vector<Method> beh1 = new Vector<Method>();
@@ -102,7 +103,7 @@ class TestGeneration {
 				"ajout a la fin","return new NotEmpty(e,this);") );
 
        	// la classe
-     	Class empty = new Class(base, Class.NOATTRIBUTE, beh1, true, root);
+     	Class empty = new Class(base+Keywords.IN+listOf+Keywords.OUT, Class.NOATTRIBUTE, beh1, true, root);
       	
      	// ecriture du fichier
      	Write g1 = new Write(dir, empty);
@@ -143,7 +144,7 @@ class TestGeneration {
 				"redefinition.","return head+\" \"+ tail.toString();"));
 		
 		// la classe
-     	Class notempty = new Class(composite, att, beh2, true, root);
+     	Class notempty = new Class(composite+Keywords.IN+listOf+Keywords.OUT, att, beh2, true, root);
       	
      	// ecriture du fichier
      	Write g2 = new Write(dir, notempty);

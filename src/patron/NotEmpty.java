@@ -27,7 +27,7 @@ public class NotEmpty extends List {
 
 	/**
 	 * teste la liste vide.
-	 * @return un booleen
+	 * @return un booleen    
 	 */
 	public final boolean isEmpty() {
 		return false;

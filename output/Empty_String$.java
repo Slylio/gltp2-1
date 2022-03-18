@@ -1,16 +1,16 @@
 // ---------------------------------
 // Ecriture dans un fichier de la classe 
 // nom dans le workspace courant 
-// output\Empty.java
+// output\Empty_String$.java
 // 
 // ---------------------------------
 
 package output; 
 
-public class Empty extends List { 
+public class Empty_String$ extends List { 
 
       // Le constucteur complet.
-      public Empty( )  { 
+      public Empty_String$( )  { 
 
       } 
 

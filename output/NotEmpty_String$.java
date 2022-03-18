@@ -1,13 +1,13 @@
 // ---------------------------------
 // Ecriture dans un fichier de la classe 
 // nom dans le workspace courant 
-// output\NotEmpty.java
+// output\NotEmpty_String$.java
 // 
 // ---------------------------------
 
 package output; 
 
-public class NotEmpty extends List { 
+public class NotEmpty_String$ extends List { 
 
 	//attribut tail
       List tail;
@@ -16,7 +16,7 @@ public class NotEmpty extends List {
       List head;
 
       // Le constucteur complet.
-      public NotEmpty( List tail, List head)  { 
+      public NotEmpty_String$( List tail, List head)  { 
             this.tail = tail; 
             this.head = head; 
 

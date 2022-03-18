@@ -1,16 +1,16 @@
 // ---------------------------------
 // Ecriture dans un fichier de la classe 
 // nom dans le workspace courant 
-// output\List.java
+// output\List_String$.java
 // 
 // ---------------------------------
 
 package output; 
 
-public abstract class List extends String { 
+public abstract class List_String$ extends String { 
 
       // Le constucteur complet.
-      public List( )  { 
+      public List_String$( )  { 
 
       } 
 
